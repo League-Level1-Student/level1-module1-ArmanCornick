@@ -56,12 +56,16 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
     Color boardColor = new Color(138, 198, 193);
     Game gameFrame = new Game("Hungry Hungry Hippos");
     boolean startGame = false;
+    
 
     /*
      * Create your hippo objects here. The "left" input parameter indicates
      * which side the hippo is drawn.
      */
-    Hippo myHippoObject = new Hippo("left");
+    Hippo myHippoObject = new Hippo("left", new Color(255,0,255), "Lizzie Hippo");
+    Hippo myHippoObject2 = new Hippo("right", new Color(255, 119, 3), "Henry Hippo");
+    Hippo myHippoObject3 = new Hippo("up", new Color(0,255,0), "Homer Hippo");
+    Hippo myHippoObject4 = new Hippo("down", new Color(255,255,0), "harry Hippo");
 
     public HungryHungryHippos() {
         gameFrame.setScene(this);
