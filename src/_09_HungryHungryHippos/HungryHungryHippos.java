@@ -66,6 +66,8 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
     Hippo myHippoObject2 = new Hippo("right", new Color(255, 119, 3), "Henry Hippo");
     Hippo myHippoObject3 = new Hippo("up", new Color(0,255,0), "Homer Hippo");
     Hippo myHippoObject4 = new Hippo("down", new Color(255,255,0), "harry Hippo");
+    
+    
 
     public HungryHungryHippos() {
         gameFrame.setScene(this);
@@ -101,6 +103,9 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
          * Draw all the hippos here
          */
         myHippoObject.draw(g);
+        myHippoObject2.draw(g);
+        myHippoObject3.draw(g);
+        myHippoObject4.draw(g);
         
         if (startGame) {
             /*
@@ -114,6 +119,9 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
              * this for all of your hippos!
              */
             checkHippoEating(myHippoObject);
+            checkHippoEating(myHippoObject2);
+            checkHippoEating(myHippoObject3);
+            checkHippoEating(myHippoObject4);
         }
     }
 
@@ -129,11 +137,11 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         } else if (keyCode == KeyEvent.VK_1) {
             myHippoObject.eat();
         } else if (keyCode == KeyEvent.VK_2) {
-            
+        	myHippoObject2.eat();
         } else if (keyCode == KeyEvent.VK_3) {
-            
+        	myHippoObject3.eat();
         } else if (keyCode == KeyEvent.VK_4) {
-            
+        	myHippoObject4.eat();
         }
     }
     
